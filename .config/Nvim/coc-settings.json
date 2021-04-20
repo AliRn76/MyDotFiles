@@ -1,0 +1,58 @@
+{
+  "rpc.enabled": true,
+  "rpc.lowerDetailsEditing": "{workspace}",
+  "rpc.lowerDetailsViewing": "{workspace}",
+  "rpc.detailsViewing": "Viewing {filename}",
+  "rpc.detailsEditing": "Editing {filename}",
+  "rpc.lowerDetailsNotFound": "No workspace",
+  "rpc.workspaceText": "In workspace {workspace}",
+  "rpc.problemsText": "{count} problems found",
+  "rpc.workspaceElapsedTime": true
+}
+
+"suggest.completionItemKindLabels": {
+    "method": "  ",
+    "function": "  ",
+    "variable": "[]",
+    "field": "  ",
+    "typeParameter": "<>",
+    "constant": "  ",
+    "class": " פּ ",
+    "interface": " 蘒",
+    "struct": "  ",
+    "event": "  ",
+    "operator": "  ",
+    "module": "  ",
+    "property": "  ",
+    "enum": " 練",
+    "reference": "  ",
+    "keyword": "  ",
+    "file": "  ",
+    "folder": " ﱮ ",
+    "color": "  ",
+    "unit": " 塞 ",
+    "snippet": "  ",
+    "text": "  ",
+    "constructor": "  ",
+    "value": "  ",
+    "enumMember": "  "
+  }
+
+"languageserver": {
+  "bash": {
+    "command": "bash-language-server",
+    "args": ["start"],
+    "filetypes": ["sh"],
+    "ignoredRootPaths": ["~"]
+  }
+}
+
+"languageserver": {
+  "rust": {
+    "command": "rust-analyzer",
+    "filetypes": ["rust"],
+    "rootPatterns": ["Cargo.toml"]
+  }
+}
+
+
