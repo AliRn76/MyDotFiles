@@ -273,7 +273,6 @@ awful.screen.connect_for_each_screen(function(s)
              layout = wibox.layout.fixed.horizontal,
              mykeyboardlayout,
              wibox.widget.systray(),
-             s.mylayoutbox,
          },
      }
  end)
@@ -354,7 +353,7 @@ globalkeys = gears.table.join(
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
+    awful.key({ modkey, "Control"}, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
@@ -380,6 +379,15 @@ globalkeys = gears.table.join(
     awful.key({ modkey,"Shift"    },            "f",     function ()
 	    awful.util.spawn("firefox") end,
               {description = "firefox", group = "app"}),
+     -- brave 
+    awful.key({ modkey,"Control"    },            "f",     function ()
+	    awful.util.spawn("brave-browser-nightly") end,
+              {description = "brave", group = "app"}),
+     -- rofi
+    awful.key({ modkey },            "p",     function ()
+	    awful.util.spawn(" rofi -show drun") end,
+              {description = "rofi", group = "app"}),
+
 
 
     awful.key({ modkey }, "x",
@@ -393,7 +401,7 @@ globalkeys = gears.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
+    awful.key({ modkey }, "hch", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
 )
 
@@ -406,7 +414,7 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
+    awful.key({ modkey, }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
@@ -623,5 +631,3 @@ end)
 awful.spawn.with_shell("nitrogen --set-zoom-fill --random ~/Pictures/")
 awful.spawn.with_shell("picom")
 awful.mouse.snap.edge_enabled = true
-
-

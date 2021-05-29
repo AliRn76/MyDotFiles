@@ -7,7 +7,15 @@
   "rpc.lowerDetailsNotFound": "No workspace",
   "rpc.workspaceText": "In workspace {workspace}",
   "rpc.problemsText": "{count} problems found",
-  "rpc.workspaceElapsedTime": true
+  "rpc.workspaceElapsedTime": true 
+}
+
+"languageserver": {
+  "rust": {
+    "command": "rust-analyzer",
+    "filetypes": ["rust"],
+    "rootPatterns": ["Cargo.toml"]
+  }
 }
 
 "suggest.completionItemKindLabels": {
