@@ -60,3 +60,4 @@ let g:coc_global_extensions = [
 \ ]
 
 
+" for hex mod use :%!xxd
